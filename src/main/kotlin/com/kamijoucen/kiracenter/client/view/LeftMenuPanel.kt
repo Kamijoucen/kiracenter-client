@@ -14,8 +14,7 @@ fun LeftMenuPanel.init(): LeftMenuPanel {
 }
 
 private fun LeftMenuPanel.initButton() {
-    val btn1 = JButton("aaaa")
-    val btn2 = JButton("bbbb")
-    this.add(btn1)
-    this.add(btn2)
+    CButton("主页").also(this::add)
+    CButton("待办").also(this::add)
+    CButton("笔记").also(this::add)
 }
