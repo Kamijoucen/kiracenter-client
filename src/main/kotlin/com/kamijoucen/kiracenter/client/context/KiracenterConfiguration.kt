@@ -1,9 +1,14 @@
 package com.kamijoucen.kiracenter.client.context
 
-interface KiracenterConfiguration {
-    
-}
+import com.kamijoucen.kiracenter.client.view.MainPagePanel
+import javax.swing.JPanel
 
-class KiracenterConfigurationImpl() : KiracenterConfiguration {
+object KiracenterConfiguration {
+
+    private val mainPageList: Map<MainPageType, JPanel> = HashMap<MainPageType, JPanel>().apply {
+        this[MainPageType.MAIN_PAGE] = MainPagePanel();
+    }
+
+    fun getMainPage(type: MainPageType) = mainPageList[type]!!
 
 }

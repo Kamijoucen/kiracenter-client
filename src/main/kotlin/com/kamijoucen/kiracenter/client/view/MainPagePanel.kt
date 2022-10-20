@@ -1,5 +1,6 @@
 package com.kamijoucen.kiracenter.client.view
 
+import java.awt.Color
 import javax.swing.JPanel
 
 /**
@@ -7,10 +8,11 @@ import javax.swing.JPanel
  */
 class MainPagePanel : JPanel() {
     init {
-        this.init()
+        initStyle()
     }
-}
 
-private fun MainPagePanel.init() {
+    private fun initStyle() {
+        this.background = Color.CYAN
+    }
 
 }
