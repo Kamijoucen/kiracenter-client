@@ -14,9 +14,9 @@ fun getRatioSizeByParentDimension(widthRatio: Int, heightRatio: Int, prent: Dime
     checkNumberRatioRange(widthRatio)
     checkNumberRatioRange(heightRatio)
     return Dimension(
-        (prent.width * (widthRatio / 100F)).toInt(),
-        (prent.height * (heightRatio / 100F)).toInt()
+        getRatioValue(prent.width, widthRatio),
+        getRatioValue(prent.height, heightRatio)
     )
 }
 
-
+fun getRatioValue(value: Int, ratio: Int) = (value * (ratio / 100F)).toInt()

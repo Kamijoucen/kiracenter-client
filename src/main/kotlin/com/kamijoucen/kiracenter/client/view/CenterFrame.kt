@@ -9,7 +9,9 @@ import javax.swing.WindowConstants
 
 class CenterFrame : JFrame() {
 
-    private val mainPanel: JPanel = JPanel(true)
+    private val mainPanel: JPanel = JPanel(true).also {
+        it.layout = BorderLayout(1, 1)
+    }
     init {
         this.initStyle()
         this.initComponent()
@@ -17,7 +19,7 @@ class CenterFrame : JFrame() {
     }
 
     private fun initStyle() {
-        this.size = getRatioSizeByCurrentScreen(80, 75)
+        this.size = getRatioSizeByCurrentScreen(75, 75)
         this.defaultCloseOperation = WindowConstants.EXIT_ON_CLOSE
         this.setLocationRelativeTo(null)
     }
